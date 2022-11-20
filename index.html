@@ -11,14 +11,29 @@
             this.posts = await (await fetch('https://api-jessedierckx.cloud.okteto.net/player')).json();
         }
     }">
-        <button x-on:click="getDataplayer">Send get request</button>
-        Data returned: <strong x-text="posts[1]">Placeholder</strong>
-        <strong x-text="posts[2]">Placeholder</strong>
-        <strong x-text="posts[3]">Placeholder</strong>
-        <strong x-text="posts[4]">Placeholder</strong>
-        <strong x-text="posts[5]">Placeholder</strong>
-        <strong x-text="posts[6]">Placeholder</strong>
+        <button x-on:click="getDataplayer">Send get request for data inserted player</button>
+        Data returned: <strong x-text="posts[0].ranking">Placeholder</strong>
+        <strong x-text="posts[0].first_name">Placeholder</strong>
+        <strong x-text="posts[0].last_name">Placeholder</strong>
+        <strong x-text="posts[0].team">Placeholder</strong>
+        <strong x-text="posts[0].age">Placeholder</strong>
+        <strong x-text="posts[0].games_played">Placeholder</strong>
+        <strong x-text="posts[0].wins">Placeholder</strong>
+        <strong x-text="posts[0].losses">Placeholder</strong>
  
+    </div>
+    <div x-data="{
+        posts1: {},
+        async getDatateam() {
+            this.posts1 = await (await fetch('https://api-jessedierckx.cloud.okteto.net/team')).json();
+        }
+    }">
+        <button x-on:click="getDatateam">Send get request for data inserted team</button>
+        Data returned: <strong x-text="posts[0].ranking">Placeholder</strong>
+        <strong x-text="posts1[0].name">Placeholder</strong>
+        <strong x-text="posts1[0].games_played">Placeholder</strong>
+        <strong x-text="posts1[0].wins">Placeholder</strong>
+        <strong x-text="posts1[0].losses">Placeholder</strong>
     </div>
 </body>
 

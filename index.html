@@ -8,21 +8,21 @@
     <div x-data="{
         0: {},
         async getDataplayer() {
-            this.0 = await (await fetch('https://api-jessedierckx.cloud.okteto.net/player')).json();
+            await (await fetch('https://api-jessedierckx.cloud.okteto.net/player')).json();
         }
     }">
         <button x-on:click="getDataplayer">Send get request for data inserted player</button>
         Data returned: <strong x-text="0.ranking">Placeholder</strong>
-        <strong x-text="posts.first_name">Placeholder</strong>
+        <!-- <strong x-text="posts.first_name">Placeholder</strong>
         <strong x-text="posts.last_name">Placeholder</strong>
         <strong x-text="posts.team">Placeholder</strong>
         <strong x-text="posts.age">Placeholder</strong>
         <strong x-text="posts.games_played">Placeholder</strong>
         <strong x-text="posts.wins">Placeholder</strong>
-        <strong x-text="posts.losses">Placeholder</strong>
+        <strong x-text="posts.losses">Placeholder</strong> -->
  
     </div>
-    <div x-data="{
+    <!-- <div x-data="{
         0: {},
         async getDatateam() {
             this.0 = await (await fetch('https://api-jessedierckx.cloud.okteto.net/team')).json();
@@ -34,7 +34,7 @@
         <strong x-text="posts1.games_played">Placeholder</strong>
         <strong x-text="posts1.wins">Placeholder</strong>
         <strong x-text="posts1.losses">Placeholder</strong>
-    </div>
+    </div> -->
 </body>
 
 </html>

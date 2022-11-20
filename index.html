@@ -17,7 +17,7 @@
     <div x-data="{
         posts: {},
         async getData() {
-            fetch('https://api-jessedierckx.cloud.okteto.net/player', { mode: 'no-cors', method: 'GET' })).json();
+            fetch('https://api-jessedierckx.cloud.okteto.net/player', { mode: 'no-cors', method: 'GET' }).then(response => response.json));
         }
     }">
         <button x-on:click="getData">Send get request for data inserted player</button>

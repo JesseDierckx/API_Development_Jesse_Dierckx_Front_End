@@ -8,7 +8,7 @@
     <div
     x-cloak
     x-data="{teams: [], 'isLoading': true}"
-    x-init="fetch('https://api-jessedierckx.cloud.okteto.net/player')
+    x-init="fetch('https://api-jessedierckx.cloud.okteto.net/player', { mode: 'cors' })
     .then(response => response.json())
     .then(response => { teams = response.teams; isLoading = false; console.log(response.teams); })"
 >

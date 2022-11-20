@@ -8,21 +8,12 @@
     <div
     x-cloak
     x-data="{teams: [], 'isLoading': true}"
-    x-init="fetch('https://api-jessedierckx.cloud.okteto.net/player', { mode: 'cors' })
+    x-init="fetch('https://api-jessedierckx.cloud.okteto.net/player', { mode: 'same-origin', method: 'GET' })
     .then(response => response.json())
     .then(response => { teams = response.teams; isLoading = false; console.log(response.teams); })"
 >
 <!-- Table will go here -->
 </div>
-
-
-
-
-
-
-
-
-
     <!-- <div x-data="{
         posts: {},
         async getDataplayer() {
